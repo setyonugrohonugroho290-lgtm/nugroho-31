@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Minimalis Tech</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Share+Tech+Mono&family=Rajdhani:wght@300;400;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<!-- Background – biar keliatan kayak layar terminal yang hidup -->
+<div class="bg-kali"></div>
+<div class="bg-grid"></div>
+<div class="bg-scan"></div>
+
+<!-- Logo Kali Linux versi SVG (kiri atas & kanan bawah) – biar makin keren -->
+<svg class="bg-logo" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"   stop-color="#a855f7"/>
+      <stop offset="50%"  stop-color="#7b2fff"/>
+      <stop offset="100%" stop-color="#00d4ff"/>
+    </linearGradient>
+    <linearGradient id="g2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%"   stop-color="#bf7fff"/>
+      <stop offset="100%" stop-color="#3d0080"/>
+    </linearGradient>
+    <linearGradient id="g3" x1="100%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%"   stop-color="#00d4ff" stop-opacity=".8"/>
+      <stop offset="100%" stop-color="#7b2fff" stop-opacity=".4"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <ellipse cx="100" cy="188" rx="55" ry="8" fill="rgba(123,47,255,.3)"/>
+  <g filter="url(#glow)">
+    <!-- Badan naga – hasil utak-atik path biar mirip logo asli Kali linux -->
+    <path d="M 60 160
+             C 40 140, 30 110, 45 85
+             C 55 65, 75 55, 95 50
+             C 115 45, 135 50, 148 65
+             C 162 80, 165 100, 158 118
+             C 150 138, 132 148, 115 152
+             C 98 156, 80 158, 60 160 Z"
+          fill="url(#g1)" opacity=".95"/>
+    <path d="M 70 155
+             C 52 137, 44 110, 57 87
+             C 67 68, 84 59, 102 55
+             C 120 51, 138 57, 150 71
+             C 155 78, 157 92, 152 108
+             C 145 128, 130 140, 112 146
+             C 96 152, 82 154, 70 155 Z"
+          fill="url(#g2)" opacity=".6"/>
+    <!-- sisanya saya buat sederhana biar ga terlalu berat di load web -->
+    <path d="M 68 145 C 52 128, 46 105, 57 84 C 64 70, 76 61, 90 57 L 85 80 C 72 85, 65 97, 65 110 C 65 125, 70 138, 80 148 Z" fill="rgba(191,127,255,.5)"/>
+    <path d="M 148 65 C 162 50, 172 45, 175 52 C 178 60, 170 72, 165 78 C 160 84, 150 82, 148 65 Z" fill="url(#g1)"/>
+    <circle cx="164" cy="62" r="5" fill="var(--cyan)" opacity=".9"/>
+    <circle cx="164" cy="62" r="2.5" fill="white"/>
+    <circle cx="165" cy="61" r="1" fill="#0a0a1a"/>
+    <path d="M 168 70 L 173 68 L 170 74 L 175 73 L 171 78" stroke="white" stroke-width="1.2" fill="none" opacity=".7"/>
+    <path d="M 152 58 L 158 42 L 162 55" fill="url(#g3)" opacity=".8"/>
+    <path d="M 158 54 L 165 38 L 168 52" fill="url(#g3)" opacity=".6"/>
+    <path d="M 75 90 C 45 75, 25 60, 20 45 C 18 38, 25 35, 35 40 C 50 48, 65 62, 78 80 Z" fill="url(#g1)" opacity=".7"/>
+    <path d="M 20 45 L 35 40 L 50 55 L 40 65 Z" fill="rgba(191,127,255,.4)"/>
+    <path d="M 125 80 C 148 65, 168 50, 178 38 C 182 32, 178 28, 170 32 C 158 38, 142 53, 128 72 Z" fill="url(#g1)" opacity=".7"/>
+    <path d="M 60 160 C 50 170, 42 175, 38 170 C 34 165, 38 155, 46 152 C 52 150, 57 155, 60 160 Z" fill="url(#g2)"/>
+    <path d="M 90 155 L 86 168 L 82 165 L 88 170 L 84 175 L 90 170 L 95 175 L 92 168 Z" fill="var(--cyan)" opacity=".6"/>
+    <path d="M 115 152 L 113 166 L 109 163 L 114 168 L 111 174 L 116 168 L 121 173 L 118 165 Z" fill="var(--cyan)" opacity=".6"/>
+    <path d="M 85 75 Q 95 68 105 75 Q 95 82 85 75 Z" fill="rgba(255,255,255,.15)"/>
+    <path d="M 105 90 Q 115 83 125 90 Q 115 97 105 90 Z" fill="rgba(255,255,255,.12)"/>
+    <path d="M 80 105 Q 92 98 104 105 Q 92 112 80 105 Z" fill="rgba(255,255,255,.1)"/>
+    <path d="M 100 120 Q 112 113 124 120 Q 112 127 100 120 Z" fill="rgba(255,255,255,.1)"/>
+    <ellipse cx="95" cy="75" rx="18" ry="10" fill="rgba(255,255,255,.08)" transform="rotate(-20 95 75)"/>
+  </g>
+  <text x="100" y="200" text-anchor="middle"
+        font-family="'Orbitron', sans-serif" font-size="11" font-weight="900"
+        letter-spacing="4" fill="url(#g1)" opacity=".8">
+    KALI LINUX
+  </text>
+</svg>
+
+<!-- Logo kecil di kiri atas -->
+<svg class="bg-logo-2" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="g4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"   stop-color="#00d4ff"/>
+      <stop offset="100%" stop-color="#7b2fff"/>
+    </linearGradient>
+  </defs>
+  <g opacity=".7">
+    <path d="M 60 160 C 40 140, 30 110, 45 85 C 55 65, 75 55, 95 50 C 115 45, 135 50, 148 65 C 162 80, 165 100, 158 118 C 150 138, 132 148, 115 152 C 98 156, 80 158, 60 160 Z" fill="url(#g4)"/>
+    <path d="M 148 65 C 162 50, 172 45, 175 52 C 178 60, 170 72, 165 78 C 160 84, 150 82, 148 65 Z" fill="url(#g4)"/>
+    <circle cx="164" cy="62" r="4" fill="#a855f7"/>
+    <path d="M 75 90 C 45 75, 25 60, 20 45 C 18 38, 25 35, 35 40 C 50 48, 65 62, 78 80 Z" fill="url(#g4)" opacity=".6"/>
+  </g>
+</svg>
+
+<!-- Kubus 3D yang muter – cuma muncul di halaman Home -->
+<div class="cube-container" id="dekorasi-kubus">
+  <div class="cube">
+    <div class="cube-face front"></div>
+    <div class="cube-face back"></div>
+    <div class="cube-face left"></div>
+    <div class="cube-face right"></div>
+    <div class="cube-face top"></div>
+    <div class="cube-face bottom"></div>
+  </div>
+</div>
+
+<!-- Intro loading (splash screen) -->
+<div id="layar-intro">
+  <div class="intro-ring">
+    <div class="intro-nama">
+      <span class="i-sub">portfolio</span>
+      <span class="i-teks">SETYO<br>NUGROHO</span>
+    </div>
+  </div>
+  <div class="intro-loading">
+    initializing<span>.</span><span>.</span><span>.</span>
+  </div>
+</div>
+
+<!-- Overlay terminal transisi antar halaman -->
+<div id="overlay">
+  <div class="term-window">
+    <div class="term-bar">
+      <div class="term-dot r"></div>
+      <div class="term-dot y"></div>
+      <div class="term-dot g"></div>
+      <span class="term-title">setyo@kali: ~</span>
+    </div>
+    <div class="term-body" id="term-body"></div>
+  </div>
+</div>
+
+<!-- Navbar -->
+<nav>
+  <div class="logo" onclick="gantiHalaman('home')">
+    minimalis tech<span class="kursor"></span>
+  </div>
+  <ul class="nav-links">
+    <li><button id="btn-home"     onclick="gantiHalaman('home')"     class="aktif"> Home</button></li>
+    <li><button id="btn-about"    onclick="gantiHalaman('about')"            >About</button></li>
+    <li><button id="btn-dukungan" k="gantiHalaman('dukungan')"         > Project</button></li>
+    <li><button id="btn-contact" k="gantiHalaman('contact')"          > Contact</button></li>
+  </ul>
+</nav>
+
+<!-- Halaman Home -->
+<div id="halaman-home" class="halaman aktif">
+  <p class="terminal-prompt reveal dari-bawah d1">
+    <span class="t-user">setyo</span>@<span class="t-host">kali</span>:~$
+    <span class="t-cmd"> whoami</span>
+  </p>
+  <h1 class="hero-nama reveal dari-bawah d2">
+    SETYO<br><span class="outline">NUGROHO</span>
+  </h1>
+  <div class="hero-badges reveal dari-bawah d3">
+    <span class="badge">SMK STUDENT</span>
+    <span class="badge cyan">WEB DEVELOPER</span>
+    <span class="badge pink">LINUX USER</span>
+    <span class="badge hijau">MOJOKERTO</span>
+  </div>
+  <p class="hero-desc reveal dari-bawah d4">
+    Belajar dari nol. Dari bangku SD yang belum kenal teknologi,
+    hingga kini membangun website dan portofolio digital
+    di <strong style="color:var(--ungu2)">SMKN 2 Mojokerto</strong>.
+  </p>
+  <button class="btn-kali reveal dari-bawah d5" onclick="gantiHalaman('about')">
+    ./about-me.sh →
+  </button>
+</div>
+
+<!-- Halaman About -->
+<div id="halaman-about" class="halaman">
+  <div class="section-number">01</div>
+  <h2 class="section-title reveal dari-bawah d1">Perjalanan <span>Pendidikan</span></h2>
+  <div class="section-line reveal dari-bawah d1"></div>
+  <div class="timeline-card-wrap">
+    <div class="tc-item reveal dari-kiri d2">
+      <div class="tc-dot">🏫</div>
+      <div class="tc-card">
+        <p class="tc-tahun">// Awal Pendidikan</p>
+        <h3 class="tc-sekolah">SDN Gayaman</h3>
+        <p class="tc-sub">Sekolah Dasar</p>
+        <p class="tc-desc">
+          Masa sekolah dasar yang masih polos dari teknologi.
+          Belajar baca tulis dan dasar-dasar ilmu pengetahuan.
+          Dunia masih sederhana tanpa komputer — inilah titik nol perjalananku.
+        </p>
+        <span class="tc-date">SD – Gayaman, Mojokerto</span>
+      </div>
+    </div>
+    <div class="tc-item kanan reveal dari-kanan d3">
+      <div class="tc-dot">💻</div>
+      <div class="tc-card">
+        <p class="tc-tahun">// Mulai Kenal Teknologi</p>
+        <h3 class="tc-sekolah">SMPN 1 Mojoanyar</h3>
+        <p class="tc-sub">Sekolah Menengah Pertama</p>
+        <p class="tc-desc">
+          Pertama kali menyentuh komputer secara serius.
+          Belajar mengetik, mengenal software dasar, dan mulai
+          penasaran dengan dunia digital yang luas.
+        </p>
+        <span class="tc-date">SMP – Mojoanyar, Mojokerto</span>
+      </div>
+    </div>
+    <div class="tc-item reveal dari-kiri d4">
+      <div class="tc-dot">🚀</div>
+      <div class="tc-card">
+        <p class="tc-tahun">// Praktek & Coding · Aktif</p>
+        <h3 class="tc-sekolah">SMKN 2 Mojokerto</h3>
+        <p class="tc-sub">Sekolah Menengah Kejuruan · Present</p>
+        <p class="tc-desc">
+          Di sinilah semua menjadi nyata. Praktek membuat portofolio digital,
+          membangun website toko online, dan belajar coding HTML, CSS, JavaScript.
+        </p>
+        <span class="tc-date">SMK – Mojokerto · Present</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="linux-card reveal dari-bawah d1">
+    <span class="linux-logo">🐧</span>
+    <span class="linux-label">$ cat hobi.txt</span>
+    <h3 class="linux-judul">Saya Suka Linux — Bebas Kustomisasi!</h3>
+    <p class="linux-desc">
+      Saya sangat menyukai <strong>Linux</strong>, terutama <strong>Kali Linux</strong>,
+      karena kebebasannya yang luar biasa. Linux memungkinkan saya
+      <strong>mengubah tampilan / skin sesuka hati</strong> —
+      mulai dari <span class="c-cyan">desktop environment</span>,
+      <span class="c-cyan">icon pack</span>, wallpaper, panel, hingga efek animasi jendela.
+      Tidak ada dua komputer Linux yang tampilannya persis sama.
+      <strong>Inilah yang membuatnya spesial — kebebasan untuk berkreasi!</strong>
+    </p>
+    <div class="linux-distro">
+      <span class="distro-tag">🐉 Kali Linux</span>
+      <span class="distro-tag">🐧 Ubuntu</span>
+      <span class="distro-tag">🌿 Linux Mint</span>
+      <span class="distro-tag">🎩 Fedora</span>
+      <span class="distro-tag">🏹 Arch Linux</span>
+    </div>
+  </div>
+
+  <h2 class="section-title reveal dari-bawah d1">Kemampuan <span>Teknis</span></h2>
+  <div class="section-line reveal dari-bawah d1"></div>
+  <div class="skill-grid">
+    <div class="skill-card reveal dari-bawah d2"><div class="skill-icon">🌐</div><div class="skill-nama">HTML</div><div class="skill-bar"><div class="skill-fill" style="--persen:80%"></div></div><div class="skill-persen">80%</div></div>
+    <div class="skill-card reveal dari-bawah d3"><div class="skill-icon">🎨</div><div class="skill-nama">CSS</div><div class="skill-bar"><div class="skill-fill" style="--persen:70%"></div></div><div class="skill-persen">70%</div></div>
+    <div class="skill-card reveal dari-bawah d4"><div class="skill-icon">⚡</div><div class="skill-nama">JavaScript</div><div class="skill-bar"><div class="skill-fill" style="--persen:50%"></div></div><div class="skill-persen">50%</div></div>
+    <div class="skill-card reveal dari-bawah d5"><div class="skill-icon">🐧</div><div class="skill-nama">Linux</div><div class="skill-bar"><div class="skill-fill" style="--persen:65%"></div></div><div class="skill-persen">65%</div></div>
+  </div>
+</div>
+
+<!-- Halaman Project -->
+<div id="halaman-dukungan" class="halaman">
+  <div class="section-number">02</div>
+  <h2 class="section-title reveal dari-bawah d1">Hasil <span>Project</span></h2>
+  <div class="section-line reveal dari-bawah d1"></div>
+  <div class="proyek-grid">
+    <div class="proyek-card reveal dari-kiri d2"><span class="proyek-tag">✓ DONE</span><h3 class="proyek-judul">Website Toko Online</h3><p class="proyek-desc">Toko online sederhana dengan HTML &amp; CSS. Halaman produk, daftar barang, dan layout yang rapi. Dibuat saat praktek di SMKN 2 Mojokerto.</p></div>
+    <div class="proyek-card reveal dari-bawah d3"><span class="proyek-tag">✓ DONE</span><h3 class="proyek-judul">Portfolio Kali Theme</h3><p class="proyek-desc">Portofolio pribadi bertema Kali Linux purple ini. Dibangun murni dengan HTML, CSS, dan JavaScript.</p></div>
+    <div class="proyek-card reveal dari-kanan d4"><span class="proyek-tag">🔨 IN PROGRESS</span><h3 class="proyek-judul">Next Project</h3><p class="proyek-desc">Terus belajar dan berkembang. Akan membuat project baru yang lebih kompleks untuk portofolio masa depan.</p></div>
+  </div>
+  <div class="tools-box reveal dari-bawah d5">
+    <p class="tools-title">$ ls tools/</p>
+    <div class="tools-list">
+      <span class="tool-item">HTML5</span><span class="tool-item">CSS3</span>
+      <span class="tool-item">JavaScript</span><span class="tool-item">VS Code</span>
+      <span class="tool-item">Kali Linux</span><span class="tool-item">GitHub</span>
+      <span class="tool-item">Figma</span><span class="tool-item">Terminal</span>
+    </div>
+  </div>
+</div>
+
+<!-- Halaman Contact -->
+<div id="halaman-contact" class="halaman">
+  <div class="section-number">03</div>
+  <h2 class="section-title reveal dari-bawah d1">Get In <span>Touch</span></h2>
+  <div class="section-line reveal dari-bawah d1"></div>
+  <div class="kontak-grid">
+    <div class="reveal dari-kiri d2">
+      <div class="sosmed-grid">
+        <div class="sosmed-card">
+          <span class="sosmed-icon">📧</span>
+          <span class="sosmed-nama">Email</span>
+          <span class="sosmed-val">setyo@email.com</span>
+        </div>
+        <div class="sosmed-card">
+          <span class="sosmed-icon">📱</span>
+          <span class="sosmed-nama">WhatsApp</span>
+          <span class="sosmed-val">+62 8xx-xxxx-xxxx</span>
+        </div>
+        <div class="sosmed-card">
+          <span class="sosmed-icon">🐙</span>
+          <span class="sosmed-nama">GitHub</span>
+          <span class="sosmed-val">github.com/setyo</span>
+        </div>
+        </div>
+      </div>
+      <div class="lokasi-card">
+        <span class="lokasi-icon">📍</span>
+        <div>
+          <span class="lokasi-label">Lokasi</span>
+          <span class="lokasi-val">Mojokerto, Jawa Timur, Indonesia</span>
+        </div>
+      </div>
+      <div class="status-bar">
+        <div class="status-dot"></div>
+        <span class="status-teks">
+          Tersedia untuk kolaborasi &amp; freelance project
+        </span>
+      </div>
+    </div>
+
+    <div class="kontak-form reveal dari-kanan d3">
+      <p class="form-title">send_message</p>
+      <div class="form-group">
+        <label>nama</label>
+        <input type="text" id="input-nama" placeholder="masukkan nama kamu..."/>
+      </div>
+      <div class="form-group">
+        <label>email</label>
+        <input type="email" id="input-email" placeholder="user@domain.com"/>
+      </div>
+      <div class="form-group">
+        <label>pesan</label>
+        <textarea id="input-pesan" placeholder="ketik pesan di sini..."></textarea>
+      </div>
+      <button class="btn-kirim" onclick="kirimPesan()">./kirim.sh →</button>
+      <div class="pesan-sukses" id="notif-sukses">
+        ✓ [SUCCESS] Pesan terkirim! Setyo akan segera membalas.
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  <span>setyo@kali</span>:~$ © 2025 · SETYO NUGROHO · SMKN 2 MOJOKERTO
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
